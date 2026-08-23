@@ -14,11 +14,11 @@ Official implementation of **RAEUFS (Robust Autoencoder-based Unsupervised Featu
 
 RAEUFS is an unsupervised feature-selection framework that combines:
 
-- a learnable feature-selection matrix $begin:math:text$W$end:math:text$,
+- a learnable feature-selection matrix $W$,
 - a deep autoencoder for nonlinear representation learning,
 - a Robust Subspace Recovery (RSR) layer for robustness to outliers,
-- a pseudo-label matrix $begin:math:text$F$end:math:text$,
-- and adaptive graph learning through the similarity matrix $begin:math:text$S$end:math:text$.
+- a pseudo-label matrix $F$,
+- and adaptive graph learning through the similarity matrix $S$.
 
 The model is designed to identify discriminative features while preserving the latent clustering structure of the data.
 

@@ -48,7 +48,7 @@ where:
 - $A$ is the RSR transformation,
 - $D$ is the decoder,
 - $Z$ is the encoder representation,
-- and $\\tilde\{Z\} is the RSR latent representation.
+- and $\\tilde\{Z\}$ is the RSR latent representation.
 
 ---
 
@@ -61,17 +61,17 @@ RAEUFS is optimized using an alternating strategy.
 The neural-network-related parameters are updated **batch by batch**:
 
 1. Encoder and decoder parameters
-2. RSR transformation $begin:math:text$A$end:math:text$
-3. Feature-selection matrix $begin:math:text$W$end:math:text$
+2. RSR transformation $A$
+3. Feature-selection matrix $W$
 
 ### At the end of each epoch
 
 After all mini-batches have been processed:
 
 1. The complete dataset is passed through the current model.
-2. The full latent representation $begin:math:text$\\tilde\{Z\}$end:math:text$ is computed.
-3. The pseudo-label matrix $begin:math:text$F$end:math:text$ is updated using **Generalized Power Iteration (GPI)**.
-4. The adaptive similarity matrix $begin:math:text$S$end:math:text$ is updated using the new $begin:math:text$F$end:math:text$.
+2. The full latent representation $\\tilde\{Z\}$ is computed.
+3. The pseudo-label matrix $F$ is updated using **Generalized Power Iteration (GPI)**.
+4. The adaptive similarity matrix $S$ is updated using the new $F$.
 
 Conceptually:
 
@@ -128,10 +128,10 @@ Contains the core RAEUFS implementation, including:
 - decoder,
 - reconstruction loss,
 - RSR loss,
-- $begin:math:text$\\ell\_\{2\,1\}$end:math:text$ feature sparsity,
+- $\\ell\_\{2\,1\}$ feature sparsity,
 - orthogonality handling,
-- GPI update for $begin:math:text$F$end:math:text$,
-- adaptive graph update for $begin:math:text$S$end:math:text$,
+- GPI update for $F$,
+- adaptive graph update for $S$,
 - and the PyTorch Lightning training procedure.
 
 ### `src/data.py`

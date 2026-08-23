@@ -24,31 +24,31 @@ The model is designed to identify discriminative features while preserving the l
 
 The overall transformation is
 
-$begin:math:display$
+$$
 X\_s \= XW\,
-$end:math:display$
+$$
 
-$begin:math:display$
+$$
 Z \= E\(X\_s\)\,
-$end:math:display$
+$$
 
-$begin:math:display$
+$$
 \\tilde\{Z\} \= ZA\,
-$end:math:display$
+$$
 
-$begin:math:display$
+$$
 \\tilde\{X\} \= D\(\\tilde\{Z\}\)\,
-$end:math:display$
+$$
 
 where:
 
-- $begin:math:text$X$end:math:text$ is the original data matrix,
-- $begin:math:text$W$end:math:text$ is the feature-selection matrix,
-- $begin:math:text$E$end:math:text$ is the encoder,
-- $begin:math:text$A$end:math:text$ is the RSR transformation,
-- $begin:math:text$D$end:math:text$ is the decoder,
-- $begin:math:text$Z$end:math:text$ is the encoder representation,
-- and $begin:math:text$\\tilde\{Z\}$end:math:text$ is the RSR latent representation.
+- $X$ is the original data matrix,
+- $W$ is the feature-selection matrix,
+- $E$ is the encoder,
+- $A$ is the RSR transformation,
+- $D$ is the decoder,
+- $Z$ is the encoder representation,
+- and $\\tilde\{Z\} is the RSR latent representation.
 
 ---
 
@@ -93,7 +93,7 @@ Epoch k
           Epoch k+1
 ```
 
-Thus, **$begin:math:text$F$end:math:text$ and $begin:math:text$S$end:math:text$ are not updated at the mini-batch level**. They are updated once after each complete training epoch.
+Thus, **$F$ and $S$ are not updated at the mini-batch level**. They are updated once after each complete training epoch.
 
 ---
 
@@ -170,7 +170,7 @@ Main experiment script used to:
 Clone the repository:
 
 ```bash
-git clone <RAEUFS >
+git clone <RAEUFS>
 ```
 
 Create or activate your Python environment and install the dependencies:
@@ -254,9 +254,9 @@ and then increase the number of epochs and independent runs after confirming tha
 
 After training, feature importance is obtained from the learned feature-selection matrix
 
-$begin:math:display$
+$$
 W \\in \\mathbb\{R\}\^\{D \\times p\}\.
-$end:math:display$
+$$
 
 The importance of each original feature is determined from the norm of the corresponding row of $begin:math:text$W$end:math:text$.
 

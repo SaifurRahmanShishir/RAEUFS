@@ -170,7 +170,7 @@ Main experiment script used to:
 Clone the repository:
 
 ```bash
-git clone <RAEUFS>
+git clone <https://github.com/SaifurRahmanShishir/RAEUFS.git>
 ```
 
 Create or activate your Python environment and install the dependencies:
